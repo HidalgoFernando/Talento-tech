@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoTechnology</title>
+  <link rel="stylesheet" href="css/styless.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Neo<span>Technology</span></div>
+
+    <div class="nav-center">
+      <input type="text" class="search-bar" placeholder="Buscar productos...">
+    </div>
+
+    <nav class="nav-links">
+      <a href="#" class="active">Inicio</a>
+      <a href="#categorias">Productos</a>
+      <a href="#reseña">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav-icons">
+      <i class="fas fa-shopping-cart"></i>
+      <i class="fas fa-user"></i>
+    </div>
+  </header>
+
+  <main>
+    <section id="productos" class="section">
+      <h2>Productos Más Vendidos</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="media/img/producto2.webp" alt="Campera de cuero">
+          <h3>GeForce RTX 3060 Graphics Card</h3>
+          <p class="price">$199.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="product-card">
+          <img src="media/img/producto1.webp" alt="Vestido rojo">
+          <h3>GeForce GTX 1080 AMP Graphics Card</h3>
+          <p class="price">$89.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="product-card">
+          <img src="media/img/producto3.webp" alt="Zapatillas urbanas">
+          <h3>GeForce RTX 4070 TI SUPER 16GB GIGABYTE EAGLE ICE</h3>
+          <p class="price">$299.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="product-card">
+          <img src="media/img/producto5.webp" alt="Producto 4">
+          <h3>GeForce RTX 3090 Graphics Card</h3>
+          <p class="price">$399.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="product-card">
+          <img src="media/img/producto6.webp" alt="Producto 5">
+          <h3>GeForce RTX 4060 8GB Dual Fan</h3>
+          <p class="price">$229.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="product-card">
+          <img src="media/img/producto7.webp" alt="Producto 6">
+          <h3>ASUS TUF Gaming RTX 4070 12GB</h3>
+          <p class="price">$319.99</p>
+          <button>Añadir al carrito</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="categorias" class="section categorias">
+      <h2>Explorá nuestras <span>categorías</span></h2>
+
+      <div class="categoria-grid">
+        <div class="categoria-card">
+          <img src="media/img/categorias/PLACADEVIDEO.jpg" alt="Placas de video">
+          <p>PLACAS DE VIDEO</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/MEMORIARAM.webp" alt="Memorias RAM">
+          <p>MEMORIAS RAM</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/pexels-xexusdesigner-777001.jpg" alt="Monitores">
+          <p>MONITORES</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/ALMACENAMIENTO.webp" alt="Almacenamiento">
+          <p>ALMACENAMIENTO</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/PROCESADORES.webp" alt="Procesadores">
+          <p>PROCESADORES</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/Mothers.webp" alt="Mothers">
+          <p>MOTHERS</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/GABINETES.webp" alt="Gabinetes">
+          <p>GABINETES</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/LAPTOP.webp" alt="Notebooks">
+          <p>NOTEBOOKS</p>
+        </div>
+
+        <div class="categoria-card">
+          <img src="media/img/categorias/fuentes.webp" alt="Fuentes">
+          <p>FUENTES</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contacto">
+      <h2>Contactanos</h2>
+
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: <a href="">technovasolutions.ar@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+      </div>
+
+      <form action="https://formspree.io/f/mdkwjyde" method="POST" class="contact-form">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Email" required>
+        <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+        <button type="submit">ENVIAR MENSAJE</button>
+      </form>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 NeoTechnology. Hecho para Talento-Tech.</p>
+  </footer>
+
+</body>
+</html>
