@@ -1,3 +1,6 @@
+/* ==================
+   ESTILOS GENERALES
+   ================== */
 body {
   margin: 0;
   font-family: "Lilita One", sans-serif;
@@ -5,20 +8,12 @@ body {
   color: #f1f1f1;
 }
 
-section:nth-of-type(1) {
-  background-color: #111111
-}
+/* Fondos distintos para cada seccion del main */
+section:nth-of-type(1) { background-color: #111111; } /* Productos */
+section:nth-of-type(2) { background-color: #1a1a1a; } /* Categorías */
+section:nth-of-type(3) { background-color: #151515; } /* Contacto */
 
-section:nth-of-type(2) {
-  background-color:  #1a1a1a;
-}
-
-section:nth-of-type(3) {
-  background-color: #151515;
-}
-
-
-
+/* Linea decorativa brillante debajo de la navbar */
 body::before {
   content: '';
   position: fixed;
@@ -29,7 +24,10 @@ body::before {
   background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
   z-index: 99;
 }
-/*Navbar */
+
+/* =======================
+   NAVBAR (MENU SUPERIOR)
+   ======================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -43,6 +41,7 @@ body::before {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
 }
 
+/* Barra de busqueda */
 .search-bar {
   width: 550px;
   padding: 12px 35px;
@@ -58,7 +57,7 @@ body::before {
   box-shadow: 0 0 8px #e6f875;
 }
 
-/* Menu*/
+/* Enlaces del menu */
 .nav-links {
   display: flex;
   gap: 35px;
@@ -72,7 +71,7 @@ body::before {
   transition: color 0.3s;
 }
 
-/* Subrayado animado */
+/* Subrayado animado debajo de los enlaces */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -93,7 +92,7 @@ body::before {
   color: #e6f875;
 }
 
-
+/* Logo principal */
 .logo {
   font-family: "Lilita One", sans-serif;
   font-size: 1.8rem;
@@ -101,31 +100,32 @@ body::before {
   letter-spacing: 3px;
   text-shadow: 0 0 10px #00f6ff;
 }
-
 .logo span {
   color: #e6f875;
 }
 
+/* Iconos (carrito, usuario) */
 .nav-icons {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .nav-icons i {
   color: #00f6ff;
   font-size: 1.2rem;
   cursor: pointer;
   transition: color 0.3s, transform 0.3s;
 }
-
 .nav-icons i:hover {
   color: #e6f875;
   transform: scale(1.2);
 }
-/* Productos */
+
+/* ====================
+   SECCIÓN DE PRODUCTOS
+   ==================== */
 .section {
-  padding: 120px 20px 120px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
@@ -139,6 +139,7 @@ body::before {
   text-shadow: 0 0 12px rgba(230, 248, 117, 0.5);
 }
 
+/* Linea brillante bajo el título al pasar el mouse */
 .section h2::after {
   content: '';
   position: absolute;
@@ -150,10 +151,11 @@ body::before {
   box-shadow: 0 0 8px #00f6ff;
   transition: width 0.8s ease;
 }
-
 .section h2:hover::after {
   width: 100%;
 }
+
+/* Cuadricula de productos */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -162,6 +164,8 @@ body::before {
   justify-items: center;
   align-items: stretch;
 }
+
+/* Cada card individual */
 .product-card {
   background-color: #1a1a1a;
   border-radius: 10px;
@@ -175,10 +179,7 @@ body::before {
   box-shadow: 0 0 20px rgba(230, 243, 40, 0.3);
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
-}
+/* Imagen del producto */
 .product-card img {
   width: 100%;
   height: 180px;
@@ -187,10 +188,14 @@ body::before {
   display: block;
   background-color: #ffffff;
 }
+
+/* Precio */
 .price {
   color: #e6f875;
   font-weight: bold;
 }
+
+/* Boton "Añadir al carrito" */
 .product-card button {
   margin-top: 5px;
   background: linear-gradient(90deg, #e6f875, #0088ff);
@@ -205,12 +210,18 @@ body::before {
 .product-card button:hover {
   opacity: 0.8;
 }
-/* Contacto */
+
+/* ===============================
+   CONTACTO (solo link de color )
+   =============================== */
 .contact a {
   color: #e6f875;
   text-decoration: none;
 }
 
+/* ===================================
+   RESPONSIVIDAD DE PRODUCTOS Y NAVBAR
+   =================================== */
 @media (max-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -221,6 +232,7 @@ body::before {
   }
 }
 
+/* Una sola columna en pantallas pequeñas */
 @media (max-width: 600px) {
   .product-grid {
     grid-template-columns: 1fr;
@@ -230,7 +242,8 @@ body::before {
     width: 100%;
   }
 }
-/* Responsivo */
+
+/* Navbar en moviles */
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
@@ -248,10 +261,13 @@ body::before {
   }
 }
 
+/* ======================
+   🧩 SECCION CATEGORIAS
+   ======================*/
 .categorias {
   padding: 60px 40px;
   background-color: #0f0f0f;
-  text-align: left; /* ✅ Alinea el título a la izquierda */
+  text-align: left;
 }
 
 .categorias h2 {
@@ -259,7 +275,7 @@ body::before {
   color: #e6f875;
   margin-bottom: 40px;
   text-shadow: 0 0 8px rgba(230, 248, 117, 0.4);
-  text-align: left; /* ✅ Mantiene el título alineado a la izquierda */
+  text-align: left;
 }
 
 .categorias h2 span {
@@ -267,7 +283,7 @@ body::before {
   text-shadow: 0 0 8px rgba(0, 246, 255, 0.4);
 }
 
-/* --- Nueva cuadrícula de categorías --- */
+/* Cuadrícula de categorias */
 .categoria-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -277,20 +293,19 @@ body::before {
   margin: 0 auto;
 }
 
-/* ✅ Primer card grande */
+/* Primera card más grande (PLACAS DE VIDEO) */
 .categoria-card:first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   height: 100%;
 }
-
 .categoria-card:first-child img {
-  height: calc(100% - 40px); /* deja espacio para el texto */
+  height: calc(100% - 40px);
   object-fit: cover;
   display: block;
 }
 
-/* ✅ Cards normales */
+/* Estilo general de las cards */
 .categoria-card {
   background-color: #1a1a1a;
   border-radius: 14px;
@@ -317,78 +332,74 @@ body::before {
   font-size: 1rem;
 }
 
-/* Hover efecto */
+/* Efecto hover */
 .categoria-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(230, 248, 117, 0.3),
               0 0 10px rgba(0, 246, 255, 0.2);
 }
 
-/* ✅ Responsivo */
+/* Adaptaciones de categorias */
 @media (max-width: 1024px) {
   .categoria-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .categoria-card:first-child {
     grid-column: span 2;
     grid-row: span 1;
   }
 }
-
 @media (max-width: 600px) {
   .categoria-grid {
     grid-template-columns: 1fr;
   }
-
   .categoria-card:first-child {
     grid-column: span 1;
   }
-
   .categoria-card img {
     height: 200px;
   }
 }
 
+/* =================
+  SECCIÓN CONTACTO
+   ================= */
 .contacto {
-  color: #e6f875; /* amarillo verdoso neón */
+  color: #e6f875;
   text-align: center;
   padding: 80px 20px;
   border-top: 1px solid #00f6ff33;
 }
 
 .contacto h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; /* ⚠️ No importaste esta fuente, podrías agregarla o cambiarla */
   font-size: 2.5rem;
   color: #00f6ff;
   text-shadow: 0 0 12px rgba(0, 246, 255, 0.8);
   margin-bottom: 40px;
 }
 
-/* Información de contacto */
+/* Info de contacto */
 .contact-info {
   font-size: 1rem;
   margin-bottom: 40px;
   line-height: 2;
 }
-
 .contact-info i {
   color: #00f6ff;
   margin-right: 8px;
 }
-
 .contact-info a {
   color: #e6f875;
   text-decoration: none;
   font-weight: 600;
 }
-
 .contact-info a:hover {
   color: #00f6ff;
   text-shadow: 0 0 10px #00f6ff;
 }
 
-/* === FORMULARIO === */
+/* Formulario */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -396,7 +407,6 @@ body::before {
   flex-direction: column;
   gap: 18px;
 }
-
 .contact-form input,
 .contact-form textarea {
   background-color: #0f0f0f;
@@ -408,12 +418,10 @@ body::before {
   border-radius: 6px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #aaa;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -421,7 +429,7 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 246, 255, 0.6);
 }
 
-/* Botón estilo neón */
+/* Botón del formulario */
 .contact-form button {
   background: transparent;
   border: 2px solid #00f6ff;
@@ -432,14 +440,13 @@ body::before {
   transition: all 0.3s ease;
   border-radius: 6px;
 }
-
 .contact-form button:hover {
   background: #00f6ff;
   color: #0f0f0f;
   box-shadow: 0 0 15px rgba(0, 246, 255, 0.6);
 }
 
-/* Responsive */
+/* Formulario mas angosto en celular */
 @media (max-width: 600px) {
   .contact-form {
     width: 90%;
