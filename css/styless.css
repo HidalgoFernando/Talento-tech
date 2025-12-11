@@ -245,58 +245,83 @@ body::before {
 
 /* NAVBAR RESPONSIVO  */
 @media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.navbar {
-padding: 12px 20px;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
+  .logo {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    order: 1;
+  }
+
+  /* Buscador debajo del logo */
+  .nav-center {
+    width: 100%;
+    order: 2;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Links en una fila */
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    order: 3;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Iconos al final */
+  .nav-icons {
+    order: 4;
+    gap: 20px;
+  }
 }
 
-.logo {
-font-size: 1.5rem;
-text-align: center;
-width: 100%;
-}
-
-.nav-links {
-width: 100%;
-justify-content: center;
-gap: 20px;
-}
-
-.search-bar {
-width: 90%;
-max-width: 400px;
-margin-top: 5px;
-}
-
-.nav-icons {
-gap: 15px;
-}
-}
-
-/* NAVBAR PARA CELULAR PEQUEÑO */
+/* Para pantallas MUY pequeñas */
 @media (max-width: 600px) {
-.navbar {
-padding: 10px 10px;
+  .navbar {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .search-bar {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .nav-icons i {
+    font-size: 1.1rem;
+  }
+
+  .cart-count {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
 }
-
-.nav-links a {
-font-size: 0.9rem;
-}
-
-.logo {
-font-size: 1.3rem;
-}
-
-.search-bar {
-width: 95%;
-}
-}
-
-
-
 
 /* ======================
    🧩 SECCION CATEGORIAS
