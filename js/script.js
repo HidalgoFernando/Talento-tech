@@ -207,3 +207,96 @@ function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
+let selectedStars = 0;
+
+document.querySelectorAll(".stars-selector span").forEach(star => {
+  star.addEventListener("click", () => {
+
+    const stars = Array.from(document.querySelectorAll(".stars-selector span"));
+    const index = stars.indexOf(star);
+    selectedStars = 5 - index;
+
+    stars.forEach(s => s.classList.remove("active"));
+
+    for (let i = 0; i < selectedStars; i++) {
+      stars[4 - i].classList.add("active");
+    }
+  });
+});
+
+
+function loadComments() {
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+  const list = document.getElementById("comments-list");
+  list.innerHTML = "";
+
+  comments.forEach((c, index) => {
+    const div = document.createElement("div");
+    div.classList.add("comment");
+
+    div.innerHTML = `
+      <img src="media/img/anonimo.webp" alt="Avatar Anónimo">
+
+      <div class="info">
+        <h4>${c.user} • <span style="color:#888">${c.date}</span></h4>
+
+        <div class="rating">${"★".repeat(c.stars)}${"☆".repeat(5 - c.stars)}</div>
+
+        <p>${c.text}</p>
+      </div>
+
+      <button class="delete-comment" data-index="${index}">✕</button>
+    `;
+
+    list.appendChild(div);
+  });
+
+  document.querySelectorAll(".delete-comment").forEach(btn => {
+    btn.addEventListener("click", deleteComment);
+  });
+}
+
+
+function deleteComment(event) {
+  const index = event.target.dataset.index;
+
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+  comments.splice(index, 1);
+
+  localStorage.setItem("comments", JSON.stringify(comments));
+
+  loadComments();
+}
+
+
+document.getElementById("submit-comment").addEventListener("click", () => {
+  const input = document.getElementById("comment-input");
+  const text = input.value.trim();
+
+  if (text === "" || selectedStars === 0) {
+    alert("Debes escribir un comentario y elegir un número de estrellas.");
+    return;
+  }
+
+  const comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+  comments.push({
+    user: "Usuario Anónimo",
+    text: text,
+    stars: selectedStars,
+    date: new Date().toLocaleDateString()
+  });
+
+  localStorage.setItem("comments", JSON.stringify(comments));
+
+  input.value = "";
+  selectedStars = 0;
+
+  document.querySelectorAll(".stars-selector span").forEach(s => s.classList.remove("active"));
+
+  loadComments();
+});
+
+
+document.addEventListener("DOMContentLoaded", loadComments);
