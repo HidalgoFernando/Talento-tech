@@ -243,23 +243,60 @@ body::before {
   }
 }
 
-/* Navbar en moviles */
+/* NAVBAR RESPONSIVO  */
 @media (max-width: 900px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .nav-center {
-    order: 3;
-  }
-  .nav-right {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .search-bar {
-    width: 80%;
-  }
+
+.navbar {
+padding: 12px 20px;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
 }
+
+.logo {
+font-size: 1.5rem;
+text-align: center;
+width: 100%;
+}
+
+.nav-links {
+width: 100%;
+justify-content: center;
+gap: 20px;
+}
+
+.search-bar {
+width: 90%;
+max-width: 400px;
+margin-top: 5px;
+}
+
+.nav-icons {
+gap: 15px;
+}
+}
+
+/* NAVBAR PARA CELULAR PEQUEÑO */
+@media (max-width: 600px) {
+.navbar {
+padding: 10px 10px;
+}
+
+.nav-links a {
+font-size: 0.9rem;
+}
+
+.logo {
+font-size: 1.3rem;
+}
+
+.search-bar {
+width: 95%;
+}
+}
+
+
+
 
 /* ======================
    🧩 SECCION CATEGORIAS
