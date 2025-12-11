@@ -248,16 +248,29 @@ body::before {
   .navbar {
     flex-direction: column;
     gap: 15px;
+    padding: 20px 10px;
+    min-height: auto;
+    align-items: center;
   }
   .nav-center {
     order: 3;
+    width: 100%;
+    justify-content: center;
   }
   .nav-right {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    align-items: center;
   }
   .search-bar {
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+
+  .nav-right > * {
+    margin: 0 5px;
   }
 }
 
