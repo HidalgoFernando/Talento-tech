@@ -246,60 +246,18 @@ body::before {
 /* NAVBAR RESPONSIVO  */
 @media (max-width: 900px) {
   .navbar {
-    padding: 15px 20px; /* Reducimos el padding lateral */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 15px;
   }
-
-  .logo {
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-  }
-
   .nav-center {
-    width: 100%;
-    order: 2;
+    order: 3;
   }
-
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
   }
-
   .search-bar {
-    width: 100%; /* Cambiamos de 90% a 100% */
-    max-width: 100%;
-    margin-top: 5px;
-    padding: 10px 20px;
-  }
-
-  .nav-icons {
-    gap: 15px;
-  }
-}
-
-/* NAVBAR PARA CELULAR PEQUEÑO */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 12px 15px; /* Menos padding aún */
-  }
-
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-
-  .logo {
-    font-size: 1.3rem;
-  }
-
-  .search-bar {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 0.9rem;
+    width: 80%;
   }
 }
 
