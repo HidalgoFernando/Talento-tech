@@ -293,7 +293,7 @@ body::before {
   margin: 0 auto;
 }
 
-/* Primera card más grande (PLACAS DE VIDEO) */
+/* Primera card más grande */
 .categoria-card:first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
@@ -372,7 +372,7 @@ body::before {
 }
 
 .contacto h2 {
-  font-family: 'Orbitron', sans-serif; /* ⚠️ No importaste esta fuente, podrías agregarla o cambiarla */
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: #00f6ff;
   text-shadow: 0 0 12px rgba(0, 246, 255, 0.8);
@@ -467,7 +467,7 @@ body::before {
 /* ==== CONTENEDOR PRINCIPAL DEL CARRITO ==== */
 .section {
     width: 100%;
-    min-height: 80vh; /* <-- para que haya espacio */
+    min-height: 80vh;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -506,14 +506,14 @@ body::before {
     border-radius: 10px;
 }
 
-/* ==== INFO ==== */
+/*  INFO*/
 .cart-info {
     flex-grow: 1;
     color: white;
     font-size: 1.1rem;
 }
 
-/* ==== BOTONES ==== */
+/*BOTONES*/
 .cart-actions {
     display: flex;
     flex-direction: column;
@@ -585,7 +585,7 @@ body::before {
   transition: color 0.2s;
 }
 
-/* HOVER correcto (ahora sí funciona) */
+/* HOVER correcto*/
 .stars-selector span:hover,
 .stars-selector span:hover ~ span {
   color: gold;
@@ -611,7 +611,7 @@ body::before {
   background: #0b74f2;
 }
 
-/* === Comentarios === */
+/*Comentarios*/
 .comments-list {
   max-width: 900px;
   margin-top: 20px;
@@ -620,7 +620,7 @@ body::before {
   gap: 25px;
 }
 
-/* Cada comentario — mucho más ancho y alineado a la izquierda */
+/* Cada comentario*/
 .comment {
   display: grid;
   grid-template-columns: 55px 1fr;
@@ -727,7 +727,7 @@ body::before {
   }
 }
 
-/* === Responsivo para celulares muy chicos === */
+/*Responsivo para celulares muy chicos*/
 @media (max-width: 480px) {
 
   .reseñas {
@@ -735,7 +735,7 @@ body::before {
   }
 
   .comment {
-    grid-template-columns: 1fr; /* FOTO ARRIBA */
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
