@@ -251,29 +251,62 @@ body::before {
     padding: 20px 10px;
     min-height: auto;
     align-items: center;
+    /* Estos estilos ya están en el navbar principal, pero los reforzamos */
+    background-color: #0a0a0a;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
   }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    order: 2;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   .nav-center {
     order: 3;
     width: 100%;
+    display: flex;
     justify-content: center;
   }
-  .nav-right {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    align-items: center;
-  }
+  
   .search-bar {
     width: 90%;
     max-width: 500px;
+    padding: 10px 20px;
   }
   
-
-  .nav-right > * {
-    margin: 0 5px;
+  .nav-icons {
+    order: 4;
+    gap: 15px;
   }
 }
 
+/* Para móviles muy pequeños */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .search-bar {
+    width: 95%;
+    font-size: 0.85rem;
+  }
+}
 
 /* ======================
    🧩 SECCION CATEGORIAS
