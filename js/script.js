@@ -300,3 +300,26 @@ document.getElementById("submit-comment").addEventListener("click", () => {
 
 
 document.addEventListener("DOMContentLoaded", loadComments);
+
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  // Solo aplicar en móvil (menos de 900px)
+  if (window.innerWidth <= 900) {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > lastScroll && currentScroll > 80) {
+      // Scrolling down - ocultar navbar
+      navbar.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up - mostrar navbar
+      navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+  } else {
+    // En desktop siempre visible
+    navbar.style.transform = 'translateY(0)';
+  }
+});

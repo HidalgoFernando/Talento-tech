@@ -19,6 +19,7 @@ body {
   font-family: "Lilita One", sans-serif;
   background-color: #0e0e0e;
   color: #f1f1f1;
+  padding-top: 80px;
 }
 
 /* Fondos distintos para cada seccion del main */
@@ -47,13 +48,16 @@ body::before {
   align-items: center;
   background-color: #0a0a0a;
   padding: 20px 80px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(0, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
   width: 100%;
   margin: 0;
+  transition: transform 0.3s ease;
 }
 
 /* Barra de busqueda */
